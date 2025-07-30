@@ -13,6 +13,7 @@ export default function Home() {
             maxWidth: 400,
             mx: "auto",
             pt: 20,
+            height: 80,
           }}
         >
           <Image
