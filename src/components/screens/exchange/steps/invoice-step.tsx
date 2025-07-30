@@ -108,8 +108,8 @@ export const InvoiceStep = () => {
         </Box>
       </Grid>
       <Grid size={{ md: 6, xs: 12 }}>
-        <Box p={6} height="100%" bgcolor="primary.100">
-          <Box p={{ md: 4, xs: 1 }} height="100%" bgcolor="background.paper" borderRadius={4}>
+        <Box px={{ md: 6, xs: 3 }} py={6} height="100%" bgcolor="primary.100">
+          <Box p={5} height="100%" bgcolor="background.paper" borderRadius={4}>
             <Typography fontWeight={600} mb={6}>
               مبلغ حدودی
             </Typography>
