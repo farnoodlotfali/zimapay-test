@@ -11,7 +11,7 @@ export const SkeletonLoading = () => {
 
         gap: 4,
       }}
-      direction="row"
+      direction={{ md: "row", xs: "column" }}
     >
       <Stack flex={1} gap={6}>
         <Skeleton height={37} width={220} sx={{ mx: "auto" }} />
