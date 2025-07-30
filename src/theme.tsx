@@ -52,7 +52,7 @@ export const IranYekan = localFont({
   ],
   preload: true,
   display: "block",
-  variable: "--IRANYekanXFaNum",
+  // variable: "--IRANYekanXFaNum",
   weight: "800",
 });
 
@@ -85,13 +85,13 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "var(--IRANYekanXFaNum)",
+    fontFamily: IranYekan.style.fontFamily,
   },
   components: {
     MuiButtonBase: {
       styleOverrides: {
         root: {
-          fontFamily: "var(--IRANYekanXFaNum)",
+          fontFamily: IranYekan.style.fontFamily,
         },
       },
     },
