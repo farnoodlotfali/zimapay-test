@@ -1,6 +1,8 @@
+import { digitsFaToEn } from "@persian-tools/persian-tools";
 import { Control, useController } from "react-hook-form";
 import { InputAdornment, TextField, Typography } from "@mui/material";
 
+import { validateNumberInput } from "@/lib/validate-number-input";
 import { CurrencyInputType } from "@/types/input-types";
 
 type Props = {
@@ -24,12 +26,18 @@ export const CurrencyInput = ({ input, control }: Props) => {
       inputRef={field.ref}
       value={field.value ?? ""}
       onChange={(e) => {
-        field.onChange(e);
+        if (!validateNumberInput(e.target.value)) {
+          return;
+        }
+        field.onChange(digitsFaToEn(e.target.value));
         if (input.props?.onChange) {
-          input.props?.onChange(e);
+          input.props?.onChange(digitsFaToEn(e.target.value));
         }
       }}
-      type="number"
+      type="text"
+      inputProps={{
+        inputMode: "numeric",
+      }}
       slotProps={{
         input: {
           endAdornment: (

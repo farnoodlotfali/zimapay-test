@@ -92,7 +92,7 @@ export const FillInfoStep = () => {
       props: {
         label: "مقدار تتر",
         onChange: (e) => {
-          handleUpdateCurrency(e.target.value, info.network);
+          handleUpdateCurrency(e as string, info.network);
         },
       },
     },

@@ -14,6 +14,9 @@ export type TextInputType = General & {};
 export type CurrencyInputType = General & {
   img: string;
   currencyName: string;
+  props?: Omit<TextFieldProps, "onChange"> & {
+    onChange?: (e: string) => void;
+  };
 };
 
 export type NumberInputType = TextInputType & {
