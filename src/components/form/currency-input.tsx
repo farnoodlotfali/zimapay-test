@@ -35,9 +35,6 @@ export const CurrencyInput = ({ input, control }: Props) => {
         }
       }}
       type="text"
-      inputProps={{
-        inputMode: "numeric",
-      }}
       slotProps={{
         input: {
           endAdornment: (
@@ -69,6 +66,7 @@ export const CurrencyInput = ({ input, control }: Props) => {
           style: {
             direction: "ltr",
           },
+          inputMode: "numeric",
         },
       }}
       error={!!error}
